@@ -85,5 +85,30 @@ namespace IRF_Project
             chart1.Series["Adatok"].Points.AddXY("Sima", countSima);
             chart1.Series["Adatok"].Points.AddXY("Mentes", countMentes);
         }
+
+        public void AddToData(object sender, EventArgs e)
+        {
+            string nev = sutinev.getText();
+            if (nev == "")
+            {
+                return;
+            }
+           
+            int cukormentes = isCukormentes.Checked ? 2 : 1;
+
+            Rendeles r = new Rendeles()
+            {
+                TortaNev = nev,
+                Allergen = cukormentes
+            };
+            adat.Add(r);
+            Debug.WriteLine(r.TortaNev);
+            
+            showChart();
+
+            sutinev.Text = "Sütemény neve...";
+            isCukormentes.Checked = false;
+        }
+
     }
 }
