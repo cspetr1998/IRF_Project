@@ -50,6 +50,9 @@
     <Compile Include="Entities\ButtonClass.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Entities\CheckBoxClass.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Entities\Rendeles.cs" />
     <Compile Include="Entities\TextBoxClass.cs">
       <SubType>Component</SubType>
