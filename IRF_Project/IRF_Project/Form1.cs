@@ -82,7 +82,8 @@ namespace IRF_Project
                                select rendelesek).Count();
             Debug.WriteLine(countSima);
             Debug.WriteLine(countMentes);
-            
+
+            chart1.Series["Adatok"].Points.Clear();
             chart1.Series["Adatok"].Points.AddXY("Sima", countSima);
             chart1.Series["Adatok"].Points.AddXY("Mentes", countMentes);
         }
