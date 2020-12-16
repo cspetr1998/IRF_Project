@@ -49,5 +49,11 @@ namespace IRF_Project
             }
             return rendelesek;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            adat = Beolvas("CSV file/rendelesek.csv");
+            dataGridView1.DataSource = adat;
+        }
     }
 }
