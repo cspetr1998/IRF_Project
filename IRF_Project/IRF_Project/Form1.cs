@@ -56,6 +56,7 @@ namespace IRF_Project
             adat = Beolvas("CSVfile/rendelesek.csv");
             dataGridView1.DataSource = adat;
             showChart();
+            flowLayoutPanel1.Visible = true;
         }
 
         private void showChart()
