@@ -27,6 +27,7 @@ namespace IRF_Project
             hozzaad = new ButtonClass();
             sutinev = new TextBoxClass();
             isCukormentes = new CheckBoxClass();
+            hozzaad.MouseClick += AddToData;
 
             this.flowLayoutPanel1.Controls.Add(sutinev);
             this.flowLayoutPanel1.Controls.Add(isCukormentes);
