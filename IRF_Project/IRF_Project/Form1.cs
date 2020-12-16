@@ -16,10 +16,21 @@ namespace IRF_Project
     public partial class Form1 : Form
     {
         private BindingList<Rendeles> adat = new BindingList<Rendeles>();
+        ButtonClass hozzaad;
+        TextBoxClass sutinev;
+        CheckBoxClass isCukormentes;
 
         public Form1()
         {
             InitializeComponent();
+
+            hozzaad = new ButtonClass();
+            sutinev = new TextBoxClass();
+            isCukormentes = new CheckBoxClass();
+
+            this.flowLayoutPanel1.Controls.Add(sutinev);
+            this.flowLayoutPanel1.Controls.Add(isCukormentes);
+            this.flowLayoutPanel1.Controls.Add(hozzaad);
         }
 
         private BindingList<Rendeles> Beolvas(string csvpath)
