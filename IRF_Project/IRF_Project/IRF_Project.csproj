@@ -79,5 +79,9 @@
   <ItemGroup>
     <Content Include="README\TextFile1.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CSVfile\" />
+    <Folder Include="Entities\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
