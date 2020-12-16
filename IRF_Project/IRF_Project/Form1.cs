@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -52,8 +53,25 @@ namespace IRF_Project
 
         private void button1_Click(object sender, EventArgs e)
         {
-            adat = Beolvas("CSV file/rendelesek.csv");
+            adat = Beolvas("CSVfile/rendelesek.csv");
             dataGridView1.DataSource = adat;
+            showChart();
+        }
+
+        private void showChart()
+        {
+            chart1.Visible = Visible;
+            int countSima = (from rendelesek in adat
+                             where rendelesek.Allergen == 1
+                             select rendelesek).Count();
+            int countMentes = (from rendelesek in adat
+                               where rendelesek.Allergen == 2
+                               select rendelesek).Count();
+            Debug.WriteLine(countSima);
+            Debug.WriteLine(countMentes);
+            
+            chart1.Series["Adatok"].Points.AddXY("Sima", countSima);
+            chart1.Series["Adatok"].Points.AddXY("Mentes", countMentes);
         }
     }
 }
